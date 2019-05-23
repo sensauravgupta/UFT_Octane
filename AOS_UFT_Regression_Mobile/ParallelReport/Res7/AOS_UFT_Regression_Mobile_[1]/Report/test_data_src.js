@@ -1,0 +1,1 @@
+﻿var __testDataSource={items:[{dataFilePath:'Default.xls',dataFileFormat:'excel',dataFileFolder:'C:\\UFT_Octane\\AOS_UFT_Regression_Mobile\\ParallelReport\\Res7\\AOS_UFT_Regression_Mobile_[1]',namePairs:[]}]};
