@@ -1,5 +1,4 @@
-﻿Browser("about:blank").Navigate DataTable("StartingURL", dtGlobalSheet)
-Browser("Advantage Shopping").Page("Advantage Shopping").Link("TABLETS Shop Now").Click @@ hightlight id_;_10000000_;_script infofile_;_ZIP::ssf1.xml_;_
+﻿Browser("Advantage Shopping").Page("Advantage Shopping").Link("TABLETS Shop Now").Click @@ hightlight id_;_10000000_;_script infofile_;_ZIP::ssf1.xml_;_
 Browser("Advantage Shopping").Page("Advantage Shopping").Image("FirstImage").Click @@ hightlight id_;_10000000_;_script infofile_;_ZIP::ssf2.xml_;_
 Browser("Advantage Shopping").Page("Advantage Shopping").Link("TABLETS").Click @@ hightlight id_;_10000000_;_script infofile_;_ZIP::ssf3.xml_;_
 Browser("Advantage Shopping").Page("Advantage Shopping").Link("HOME").Click @@ hightlight id_;_10000000_;_script infofile_;_ZIP::ssf4.xml_;_
@@ -18,8 +17,8 @@ Browser("Advantage Shopping").Page("Advantage Shopping").Link("HOME").Click @@ h
 Browser("Advantage Shopping").Page("Advantage Shopping").Link("SPEAKERS Shop Now").Click @@ hightlight id_;_10000000_;_script infofile_;_ZIP::ssf37.xml_;_
 Browser("Advantage Shopping").Page("Advantage Shopping").Image("FirstImage").Click @@ hightlight id_;_10000000_;_script infofile_;_ZIP::ssf38.xml_;_
 Browser("Advantage Shopping").Page("Advantage Shopping").Link("SPEAKERS").Click
-Browser("Advantage Shopping").Page("Advantage Shopping").Link("SPEAKERS").Click
 
 Browser("Advantage Shopping").Page("Advantage Shopping").Link("HOME").Click
 Browser("Advantage Shopping").Close
+
 
