@@ -16,4 +16,4 @@ Browser("Advantage Shopping").Page("Advantage Shopping").Link("HeadphonesCategor
 Browser("Advantage Shopping").Page("Advantage Shopping").WebElement("Logitech USB Headset H390").Click @@ script infofile_;_ZIP::ssf16.xml_;_
 Browser("Advantage Shopping").Page("Advantage Shopping").Link("dvantage DEMO").Click @@ script infofile_;_ZIP::ssf17.xml_;_
 Browser("Advantage Shopping").Page("Advantage Shopping").Link("SpeakersCategory").Click @@ script infofile_;_ZIP::ssf18.xml_;_
-Browser("Advantage Shopping").Page("Advantage Shopping").Link("SpeakersCategory").Click @@ script infofile_;_ZIP::ssf18.xml_;_
+
