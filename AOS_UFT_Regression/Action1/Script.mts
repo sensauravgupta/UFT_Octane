@@ -17,9 +17,14 @@ Browser("Advantage Shopping").Page("Advantage Shopping").Link("HOME").Click @@ h
 Browser("Advantage Shopping").Page("Advantage Shopping").Link("SPEAKERS Shop Now").Click @@ hightlight id_;_10000000_;_script infofile_;_ZIP::ssf37.xml_;_
 Browser("Advantage Shopping").Page("Advantage Shopping").Image("FirstImage").Click @@ hightlight id_;_10000000_;_script infofile_;_ZIP::ssf38.xml_;_
 Browser("Advantage Shopping").Page("Advantage Shopping").Link("SPEAKERS").Click
+Browser("Advantage Shopping").Page("Advantage Shopping").Link("HOME").Click
+Browser("Advantage Shopping").Page("Advantage Shopping").Link("SPEAKERS Shop Now").Click
+Browser("Advantage Shopping").Page("Advantage Shopping").Image("fetchImage?image_id=4700").Click
+Browser("Advantage Shopping").Page("Advantage Shopping").WebEdit("quantity").Set "2" @@ script infofile_;_ZIP::ssf43.xml_;_
+Browser("Advantage Shopping").Page("Advantage Shopping").WebButton("save_to_cart").Click @@ script infofile_;_ZIP::ssf44.xml_;_
+Browser("Advantage Shopping").Page("Advantage Shopping").WebElement("WebElement").Click
+Browser("Advantage Shopping").Page("Advantage Shopping").WebElement("REMOVE").Click @@ script infofile_;_ZIP::ssf47.xml_;_
+Browser("Advantage Shopping").Page("Advantage Shopping").Link("HOME").Click @@ script infofile_;_ZIP::ssf48.xml_;_
 
-Browser("Advantage Shopping").Page("Advantage Shopping").Link("HOME").Click
-Browser("Advantage Shopping").Page("Advantage Shopping").Link("HOME").Click
-Browser("Advantage Shopping").Close
 
 
