@@ -1,29 +1,35 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-- task: octane-start-task@1
-  inputs:
-    OctaneServiceConnection: 'AZD Pipeline'
-    WorkspaceList: '1002'
-    variables:
-      InjectAlmOctaneTasks: 'true'
-      AlmOctaneConnectionName: 'AZD Pipeline'
-trigger:
-- master
-
-pool:
-  vmImage: 'ubuntu-latest'
-
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-- task: octane-end-task@1
-  inputs:
-    OctaneServiceConnection: 'AZD Pipeline'
-    WorkspaceList: '1002'
+variables:
+            InjectAlmOctaneTasks: 'true'
+            OctaneConnectionName: 'AZD Pipeline'
+          
+jobs:
+          - job: AlmOctanePipelineStart
+            condition: always()
+            
+          - job: A
+            dependsOn: AlmOctanePipelineStart
+            steps:
+            - bash: echo "A"
+          
+          - job: C
+            dependsOn: AlmOctanePipelineStart
+            pool:
+              vmImage: 'ubuntu-latest'
+            steps:
+            - task: Maven@3
+              inputs:
+                mavenPomFile: 'pom.xml'
+                mavenOptions: '-Xmx3072m'
+                javaHomeOption: 'JDKVersion'
+                jdkVersionOption: '1.8'
+                jdkArchitectureOption: 'x64'
+                publishJUnitResults: true
+                testResultsFiles: '**/surefire-reports/TEST-*.xml'
+                goals: 'package'
+          
+          - job: AlmOctanePipelineEnd
+            condition: always()
+            dependsOn:
+            - AlmOctanePipelineStart
+            - A
+            - C
