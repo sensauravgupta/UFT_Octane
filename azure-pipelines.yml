@@ -1,11 +1,6 @@
 variables:
             InjectAlmOctaneTasks: 'true'
             OctaneConnectionName: 'AZD Pipeline'
-steps: 
-    - task: octane-start-task@1
-      inputs:
-        OctaneServiceConnection: 'AZD Pipeline'
-        WorkspaceList: '1002'
 jobs:
           - job: AlmOctanePipelineStart
             condition: always()
@@ -22,8 +17,3 @@ jobs:
             dependsOn:
             - AlmOctanePipelineStart
             - A
-steps: 
-    - task: octane-end-task@1
-      inputs:
-        OctaneServiceConnection: 'AZD Pipeline'
-        WorkspaceList: '1002'
