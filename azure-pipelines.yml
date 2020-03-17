@@ -2,13 +2,13 @@
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
-    variables:
-      InjectAlmOctaneTasks: 'true'
-      AlmOctaneConnectionName: 'AZD Pipeline'
 - task: octane-start-task@1
   inputs:
     OctaneServiceConnection: 'AZD Pipeline'
     WorkspaceList: '1002'
+    variables:
+      InjectAlmOctaneTasks: 'true'
+      AlmOctaneConnectionName: 'AZD Pipeline'
 trigger:
 - master
 
