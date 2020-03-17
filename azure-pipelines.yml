@@ -4,6 +4,15 @@ variables:
 jobs:
           - job: AlmOctanePipelineStart
             condition: always()
+            steps:
+            - task: octane-start-task@1
+              inputs:
+                OctaneServiceConnection: 'AZD Pipeline'
+                WorkspaceList: '1002'
+            - task: octane-end-task@1
+              inputs:
+                OctaneServiceConnection: 'AZD Pipeline'
+                WorkspaceList: '1002'
             
           - job: A
             dependsOn: AlmOctanePipelineStart
