@@ -5,6 +5,9 @@ jobs:
           - job: AlmOctanePipelineStart
             condition: always()
             steps:
+            - task: octane-connection-verifier@1
+              inputs:
+                OctaneServiceConnection: 'AZD Pipeline'
             - task: octane-start-task@1
               inputs:
                 OctaneServiceConnection: 'AZD Pipeline'
