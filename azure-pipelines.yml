@@ -2,20 +2,13 @@ variables:
             InjectAlmOctaneTasks: 'true'
             OctaneConnectionName: 'AZD Pipeline'
           
-jobs:
-          - job: AlmOctanePipelineStart
-            condition: always()
-            
-          - job: A
-            dependsOn: AlmOctanePipelineStart
-            steps:
-            - bash: echo "A"
-          
-         
-          
-          - job: AlmOctanePipelineEnd
-            condition: always()
-            dependsOn:
-            - AlmOctanePipelineStart
-            - A
-            
+task:
+         - task: octane-start-task@1
+           inputs:
+             OctaneServiceConnection: 'AZD Pipeline'
+             WorkspaceList: '1001'    
+          - task: octane-end-task@1
+            inputs:
+              OctaneServiceConnection: 'AZD Pipeline'
+              WorkspaceList: '1002'
+                      
