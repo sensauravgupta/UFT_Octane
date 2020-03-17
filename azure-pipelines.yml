@@ -5,13 +5,10 @@
 variables:
       InjectAlmOctaneTasks: 'true'
       AlmOctaneConnectionName: 'AZD Pipeline'
-- task: octane-connection-verifier@1
+- task: octane-end-task@1
   inputs:
     OctaneServiceConnection: 'AZD Pipeline'
-    - task: octane-start-task@1
-      inputs:
-        OctaneServiceConnection: 'AZD Pipeline'
-        WorkspaceList: '1002'
+    WorkspaceList: '1002'
 trigger:
 - master
 
