@@ -5,7 +5,7 @@
 variables:
       InjectAlmOctaneTasks: 'true'
       AlmOctaneConnectionName: 'AZD Pipeline'
-- task: octane-end-task@1
+- task: octane-start-task@1
   inputs:
     OctaneServiceConnection: 'AZD Pipeline'
     WorkspaceList: '1002'
